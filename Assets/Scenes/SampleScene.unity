@@ -263,6 +263,7 @@ Transform:
   - {fileID: 1259538488}
   - {fileID: 1621816515}
   - {fileID: 1467090870}
+  - {fileID: 939190636}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 178.999, z: 0}
@@ -636,6 +637,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &939190635
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 939190636}
+  m_Layer: 0
+  m_Name: shotPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &939190636
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939190635}
+  m_LocalRotation: {x: 0.72234064, y: -0.69148225, z: -0.0063085207, w: 0.0060390118}
+  m_LocalPosition: {x: -7.382235, y: -0.02167546, z: -0.07892281}
+  m_LocalScale: {x: 2.1769428, y: 2.1769423, z: 2.1769428}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 64901548}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: -178.999, z: -92.501}
 --- !u!1 &1168207743
 GameObject:
   m_ObjectHideFlags: 0
@@ -997,6 +1029,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2083060084}
   - component: {fileID: 2083060085}
+  - component: {fileID: 2083060086}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
@@ -1071,3 +1104,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2083060086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083060083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6ba0f73cd8e84a65b82dfb0d2f67f13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 2043795930799804558, guid: bf07574ca2b3946f78e1863f3eb116e7, type: 3}
+  shotPoint: {fileID: 939190636}
+  timeBetweenShots: 0.1
