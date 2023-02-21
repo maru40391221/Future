@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private bool facingRight = true;
 
+
     private void Start() {
         rb = GetComponent<Rigidbody2D>();
     }

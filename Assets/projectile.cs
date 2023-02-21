@@ -9,10 +9,15 @@ public class projectile : MonoBehaviour
     void Start()
     {
         Destroy(gameObject, lifeTime);
+
     }
 
-    void Update()
-    {
-     transform.Translate(Vector2.left *speed*Time.deltaTime);
+    private void Update() {
+        transform.Translate(Vector2.left *speed*Time.deltaTime);
     }
 }
+
+
+
+
+

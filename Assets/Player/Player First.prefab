@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 5384846598602072958}
   - component: {fileID: 5384846598602072956}
   - component: {fileID: 5384846598602072931}
-  - component: {fileID: -1387046066298296541}
+  - component: {fileID: 2247695586522282786}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Player First
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -136,7 +136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   jumpForce: 0
---- !u!212 &-1387046066298296541
+--- !u!212 &2247695586522282786
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
