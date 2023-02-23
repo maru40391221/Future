@@ -10,12 +10,22 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private bool facingRight = true;
 
+    private bool isGrounded; 
+    public Transform groundCheck;
+    public float checkRadius;
+    public LayerMask whatIsGround;  
+
+    public int extraJumps;
+
 
     private void Start() {
         rb = GetComponent<Rigidbody2D>();
     }
 
     private void FixedUpdate() {
+
+        isGrounded = Physics2D.OverlapCircle(groundCheck, checkRadius, whatIsGround);
+
         moveInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(moveInput*speed, rb.velocity.y);
         
@@ -26,6 +36,13 @@ public class PlayerController : MonoBehaviour
         {
             Flip();
         }
+
+        if (Input.GetKeyDown(KeyCode.UpArrow) && extraJumps>0)
+        {
+            rb.velocity = Vector2.up * jumpForce;
+        }
+
+
     }
 
     void Flip (){

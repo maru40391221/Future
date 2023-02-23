@@ -9,6 +9,7 @@ public class Weapon : MonoBehaviour
     public Transform shotPoint;
     public float timeBetweenShots;
     private float shotTime;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +21,7 @@ public class Weapon : MonoBehaviour
     {
         Vector2 direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        Quaternion rotation = Quaternion.AngleAxis(angle + 180, Vector3.forward);
+        Quaternion rotation = Quaternion.AngleAxis(angle - 180, Vector3.forward);
         transform.rotation = rotation;
 
 

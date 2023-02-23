@@ -108,10 +108,10 @@ TextureImporter:
       name: PLAYER_2-5_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 19
-        width: 83
-        height: 44
+        x: 8
+        y: 23
+        width: 74
+        height: 34
       alignment: 9
       pivot: {x: 0.505509, y: 0.62123984}
       border: {x: 0, y: 0, z: 0, w: 0}
