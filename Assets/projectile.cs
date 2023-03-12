@@ -6,6 +6,8 @@ public class projectile : MonoBehaviour
 {
     public float speed;
     public float lifeTime;
+
+    public int damage;
     void Start()
     {
         Destroy(gameObject, lifeTime);
@@ -14,6 +16,14 @@ public class projectile : MonoBehaviour
 
     private void Update() {
         transform.Translate(Vector2.left *speed*Time.deltaTime);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision) {
+        
+        if (collision.tag == "Enemy") {
+            collision.GetComponent<Enemy>().TakeDamage(damage);
+            Destroy(gameObject);
+        }
     }
 }
 
