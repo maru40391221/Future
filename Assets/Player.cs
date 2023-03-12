@@ -5,9 +5,13 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float speed;
+
+    public int health;
     private Rigidbody2D rb;
     private Vector2 moveAmount;
     private Animator anim;
+
+    
 
     void Start()
     {
@@ -33,12 +37,13 @@ public class Player : MonoBehaviour
     
 
     }
+    
 
-        private void FixedUpdate() {
+
+    private void FixedUpdate() {
         rb.MovePosition(rb.position + moveAmount *Time.fixedDeltaTime);
     }
 
 
-
-    
 }
+

@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
     private int extraJumps;
     public int extraJumpsValue;
 
+    public int health;
+
 
     private void Start() {
         extraJumps = extraJumpsValue;
@@ -67,5 +69,14 @@ public class PlayerController : MonoBehaviour
         Vector3 Scaler = transform.localScale;
         Scaler.x *= -1;
         transform.localScale = Scaler;
+    }
+
+    public void TakeDamage (int damageAmount) 
+    {
+        health -= damageAmount;
+        if (health<=0) {
+        Destroy(gameObject);
+        }
+    
     }
 }
