@@ -264,7 +264,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 300971951}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -415,7 +415,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1138616900}
   - component: {fileID: 1138616901}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ENEMY_1-2_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -621,7 +621,7 @@ GameObject:
   - component: {fileID: 1316123863}
   - component: {fileID: 1316123865}
   - component: {fileID: 1316123864}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ENEMY_1-1_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -727,6 +727,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 765530029249392531, guid: 319a46a6319d34207b4c6dd19fcf7004, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 951808455977462754, guid: 319a46a6319d34207b4c6dd19fcf7004, type: 3}
       propertyPath: shotPoint
       value: 
@@ -735,6 +739,10 @@ PrefabInstance:
       propertyPath: angleForGun
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 951808455977462759, guid: 319a46a6319d34207b4c6dd19fcf7004, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1122265399199027042, guid: 319a46a6319d34207b4c6dd19fcf7004, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5454645
@@ -742,6 +750,10 @@ PrefabInstance:
     - target: {fileID: 1122265399199027042, guid: 319a46a6319d34207b4c6dd19fcf7004, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.374
+      objectReference: {fileID: 0}
+    - target: {fileID: 1122265399199027043, guid: 319a46a6319d34207b4c6dd19fcf7004, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1122265399848127024, guid: 319a46a6319d34207b4c6dd19fcf7004, type: 3}
       propertyPath: m_Size.y
@@ -844,12 +856,36 @@ PrefabInstance:
       value: Player Second
       objectReference: {fileID: 0}
     - target: {fileID: 1122265399848127030, guid: 319a46a6319d34207b4c6dd19fcf7004, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1122265399848127030, guid: 319a46a6319d34207b4c6dd19fcf7004, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1122265399848127030, guid: 319a46a6319d34207b4c6dd19fcf7004, type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2382577704791446680, guid: 319a46a6319d34207b4c6dd19fcf7004, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3341785124382707044, guid: 319a46a6319d34207b4c6dd19fcf7004, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5054635338606462489, guid: 319a46a6319d34207b4c6dd19fcf7004, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6496838630620620895, guid: 319a46a6319d34207b4c6dd19fcf7004, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8778545172713839587, guid: 319a46a6319d34207b4c6dd19fcf7004, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 319a46a6319d34207b4c6dd19fcf7004, type: 3}
@@ -1010,7 +1046,7 @@ GameObject:
   - component: {fileID: 2070275293}
   - component: {fileID: 2070275292}
   - component: {fileID: 2070275295}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
