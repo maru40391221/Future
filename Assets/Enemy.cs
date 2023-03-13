@@ -15,6 +15,8 @@ public class Enemy : MonoBehaviour
     public float timeBetweenAttacks;
     public float attackSpeed;
 
+    public int damage;
+
 
     private void Start() 
     {
@@ -39,7 +41,7 @@ public class Enemy : MonoBehaviour
         
         IEnumerator Attack() 
         {
-            player.GetComponent<Player>().TakeDamage(damage);
+            player.GetComponent<PlayerController>().TakeDamage(damage);
 
             Vector2 originalPosition = transform.position;
             Vector2 targetPosition = player.position;
@@ -53,9 +55,10 @@ public class Enemy : MonoBehaviour
             }
         }
 
-        
-   
-   public void TakeDamage (int damageAmount) 
+
+    }
+
+    public void TakeDamage (int damageAmount) 
    {
     health -= damageAmount;
     if (health<=0) {

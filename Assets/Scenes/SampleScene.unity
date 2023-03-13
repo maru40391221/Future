@@ -1033,6 +1033,9 @@ MonoBehaviour:
   player: {fileID: 0}
   stopDistance: 1.5
   speed: 4
+  timeBetweenAttacks: 2
+  attackSpeed: 2
+  damage: 1
 --- !u!50 &2070275293
 Rigidbody2D:
   serializedVersion: 4
