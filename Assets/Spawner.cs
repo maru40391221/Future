@@ -4,17 +4,26 @@ using UnityEngine;
 
 public class Spawner : Enemy
 {     
-    public int health;
-    [HideInInspector]
-    public Transform player;
+
     public float timeBetweenSummons;
     private float summonTime;
     public GameObject enemyToSummon;
 
+    public float minX;
+    public float maxX;
+    public float minY;
+    public float maxY;
+    private Vector2 targetPosition;
+    public float speed;
 
-    private void Start() 
+
+    public override void Start() 
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        base.Start();
+        float randomX = Random.Range(minX,maxX);
+        float randomY = Random.Range(minY,maxY);
+        targetPosition = new Vector2 (randomX, randomY);
+
     }
 
     private void Update() {
@@ -25,17 +34,15 @@ public class Spawner : Enemy
                 summonTime = Time.time + timeBetweenSummons;
                 Instantiate(enemyToSummon, transform.position, transform.rotation);
 
+            } else {
+            if (Vector2.Distance (transform.position, targetPosition) > .5f){
+                transform.position = Vector2.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
             }
-
+            
+            }
         }
+
     }
 
-    public void TakeDamage (int damageAmount) 
-   {
-    health -= damageAmount;
-    if (health<=0) {
-        Destroy(gameObject);
-    }
-   }
 
 }

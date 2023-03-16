@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3593503215197580594}
   - component: {fileID: 3593503215197580595}
   - component: {fileID: 3593503215197580592}
+  - component: {fileID: 1649435714614591322}
   m_Layer: 8
   m_Name: Enemy
   m_TagString: Enemy
@@ -64,18 +65,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3593503215197580596}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 15000737060cd4f6f8746f93584900f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
   player: {fileID: 0}
-  stopDistance: 1.5
-  speed: 4
-  timeBetweenAttacks: 2
-  attackSpeed: 2
-  damage: 1
 --- !u!61 &3593503215197580592
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -102,6 +98,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.35610652, y: 0.49919397}
   m_EdgeRadius: 0
+--- !u!114 &1649435714614591322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3593503215197580596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 393f74b96acf54f0aa78b70e5b484226, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 5
+  player: {fileID: 0}
+  stopDistance: 5
+  speed: 10
+  timeBetweenAttacks: 5
+  attackSpeed: 5
+  damage: 1
 --- !u!1 &3593503215515401529
 GameObject:
   m_ObjectHideFlags: 0

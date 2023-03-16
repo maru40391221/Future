@@ -375,6 +375,11 @@ MonoBehaviour:
   player: {fileID: 0}
   timeBetweenSummons: 3
   enemyToSummon: {fileID: 3593503215197580596, guid: 3536d4366ec4747c49a020a173dfadc5, type: 3}
+  minX: 10
+  maxX: 30
+  minY: 10
+  maxY: 20
+  speed: 10
 --- !u!1 &2260729790912503989
 GameObject:
   m_ObjectHideFlags: 0
