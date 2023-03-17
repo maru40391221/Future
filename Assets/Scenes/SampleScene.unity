@@ -910,7 +910,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2260729790549333979, guid: b7220b35600864dbcbbbf37f02bc0174, type: 3}
       propertyPath: maxY
-      value: 0
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2260729790549333979, guid: b7220b35600864dbcbbbf37f02bc0174, type: 3}
       propertyPath: minX
@@ -918,7 +918,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2260729790549333979, guid: b7220b35600864dbcbbbf37f02bc0174, type: 3}
       propertyPath: minY
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2260729790549333979, guid: b7220b35600864dbcbbbf37f02bc0174, type: 3}
       propertyPath: speed
@@ -950,7 +950,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2260729790549333979, guid: b7220b35600864dbcbbbf37f02bc0174, type: 3}
       propertyPath: timeBetweenSummons
-      value: 100
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2260729790549333980, guid: b7220b35600864dbcbbbf37f02bc0174, type: 3}
       propertyPath: m_Name

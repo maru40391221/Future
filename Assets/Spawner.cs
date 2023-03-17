@@ -15,6 +15,7 @@ public class Spawner : Enemy
     public float maxY;
     private Vector2 targetPosition;
     public float speed;
+    public float stopDistance;
 
 
     public override void Start() 
@@ -26,23 +27,31 @@ public class Spawner : Enemy
 
     }
 
-    private void Update() {
+    private void Update() 
+    {
         if (player != null)
         {
-            if (Time.time >= summonTime)
+            if (Vector2.Distance(transform.position, player.position) > stopDistance)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, targetPosition, speed*Time.deltaTime);
+            }else{
+                if (Time.time >= summonTime)
             {
                 summonTime = Time.time + timeBetweenSummons;
                 Instantiate(enemyToSummon, transform.position, transform.rotation);
-
-            } else {
-            if (Vector2.Distance (transform.position, targetPosition) > .5f){
                 transform.position = Vector2.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
+
+            } 
+
+
             }
             
-            }
+            
         }
-
     }
 
-
+    
 }
+
+
+
