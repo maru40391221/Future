@@ -9,49 +9,53 @@ public class Spawner : Enemy
     private float summonTime;
     public GameObject enemyToSummon;
 
-    public float minX;
-    public float maxX;
-    public float minY;
-    public float maxY;
-    private Vector2 targetPosition;
-    public float speed;
-    public float stopDistance;
+    public float Speed;
+    public Transform[] moveSpots;
+    private int randomSpot;
+
+    private float waitTime;
+
+    public float startWaitTime;
 
 
     public override void Start() 
     {
         base.Start();
-        float randomX = Random.Range(minX,maxX);
-        float randomY = Random.Range(minY,maxY);
-        targetPosition = new Vector2 (randomX, randomY);
-
+        randomSpot = Random.Range(0, moveSpots.Length);
     }
 
     private void Update() 
     {
+
         if (player != null)
         {
-            if (Vector2.Distance(transform.position, player.position) > stopDistance)
-            {
-                transform.position = Vector2.MoveTowards(transform.position, targetPosition, speed*Time.deltaTime);
-            }else{
-                if (Time.time >= summonTime)
+            
+           
+            if (Time.time >= summonTime)
             {
                 summonTime = Time.time + timeBetweenSummons;
                 Instantiate(enemyToSummon, transform.position, transform.rotation);
-                transform.position = Vector2.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
+            }   
+        }
 
-            } 
+        transform.position = Vector2.MoveTowards (transform.position, moveSpots[randomSpot].position, Speed*Time.deltaTime);
 
-
+        if (Vector2.Distance(transform.position, moveSpots[randomSpot].position) < 0.2f )
+        {
+            if (waitTime <= 0){
+                randomSpot = Random.Range(0, moveSpots.Length);
+                waitTime = startWaitTime;
+            }else{
+            waitTime -= Time.deltaTime;
             }
-            
-            
+
         }
     }
 
-    
 }
+
+    
+
 
 
 
