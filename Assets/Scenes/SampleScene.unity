@@ -286,6 +286,31 @@ Transform:
   m_Father: {fileID: 29120389}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &313584870 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 951808455977462759, guid: 319a46a6319d34207b4c6dd19fcf7004, type: 3}
+  m_PrefabInstance: {fileID: 1611651851}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &313584874
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313584870}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 09d858e389cdf42c39b91eee98236ffa, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &345605846
 GameObject:
   m_ObjectHideFlags: 0
@@ -1433,7 +1458,7 @@ PrefabInstance:
     - target: {fileID: 2260729790549333979, guid: b7220b35600864dbcbbbf37f02bc0174, type: 3}
       propertyPath: enemyToSummon
       value: 
-      objectReference: {fileID: 3593503215197580596, guid: 3536d4366ec4747c49a020a173dfadc5, type: 3}
+      objectReference: {fileID: 694728152}
     - target: {fileID: 2260729790549333979, guid: b7220b35600864dbcbbbf37f02bc0174, type: 3}
       propertyPath: startWaitTime
       value: 0.2

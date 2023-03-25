@@ -18,10 +18,13 @@ public class PlayerController : MonoBehaviour
 
     public int health;
 
+    private Animator anim;
+
 
     private void Start() {
         extraJumps = extraJumpsValue;
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator> ();
     }
 
     private void FixedUpdate() {
@@ -44,6 +47,13 @@ public class PlayerController : MonoBehaviour
             rb.velocity = Vector2.up * jumpForce;
         }
 
+        if (rb.velocity != Vector2.zero){
+            anim.SetBool("isRunning", true);
+            }
+        else {
+            anim.SetBool("isRunning", false);
+            }
+
 
     }
 
@@ -62,6 +72,8 @@ public class PlayerController : MonoBehaviour
         {
             rb.velocity = Vector2.up * jumpForce;
         }
+
+        
     }
 
     void Flip (){
