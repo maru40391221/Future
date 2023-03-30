@@ -17,11 +17,14 @@ public class Spawner : Enemy
 
     public float startWaitTime;
 
+    private Animator anim;
+
 
     public override void Start() 
     {
         base.Start();
         randomSpot = Random.Range(0, moveSpots.Length);
+        anim = GetComponent<Animator> ();
     }
 
     private void Update() 
@@ -29,13 +32,16 @@ public class Spawner : Enemy
 
         if (player != null)
         {
-            
            
             if (Time.time >= summonTime)
             {
                 summonTime = Time.time + timeBetweenSummons;
+                anim.SetBool("spawning", true);
                 Instantiate(enemyToSummon, transform.position, transform.rotation);
-            }   
+            }  else
+            {
+                anim.SetBool("spawning", false);
+            }
         }
 
         transform.position = Vector2.MoveTowards (transform.position, moveSpots[randomSpot].position, Speed*Time.deltaTime);
@@ -50,6 +56,9 @@ public class Spawner : Enemy
             }
 
         }
+
+        
+
     }
 
 }
