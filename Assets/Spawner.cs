@@ -36,12 +36,9 @@ public class Spawner : Enemy
             if (Time.time >= summonTime)
             {
                 summonTime = Time.time + timeBetweenSummons;
-                anim.SetBool("spawning", true);
-                Instantiate(enemyToSummon, transform.position, transform.rotation);
-            }  else
-            {
-                anim.SetBool("spawning", false);
-            }
+                anim.SetTrigger("spawning");
+                
+            } 
         }
 
         transform.position = Vector2.MoveTowards (transform.position, moveSpots[randomSpot].position, Speed*Time.deltaTime);
@@ -59,6 +56,12 @@ public class Spawner : Enemy
 
         
 
+    }
+
+    public void summon (){
+        if (player != null){
+            Instantiate(enemyToSummon, transform.position, transform.rotation);
+        }
     }
 
 }
