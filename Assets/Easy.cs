@@ -32,10 +32,7 @@ public class Easy : Enemy
                 if (Time.time >=attackTime){
                      StartCoroutine(Attack());
                     attackTime = Time.time + timeBetweenAttacks;
-                    anim.SetBool("attack", true);
-                     }else {
-                    anim.SetBool("attack", false);
-                    }
+                     }
                 
             }
         
@@ -59,6 +56,7 @@ public class Easy : Enemy
 
 
     }
+
 
 
 }

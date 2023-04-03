@@ -45,17 +45,14 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.UpArrow) && extraJumps>0)
         {
             rb.velocity = Vector2.up * jumpForce;
-            
+            anim.SetTrigger("jumping");
         }
-        {
 
-        }
 
         if (rb.velocity != Vector2.zero){
             anim.SetBool("isRunning", true);
-            }
-        else {
-            anim.SetBool("isRunning", false);
+            } else {
+                anim.SetBool("isRunning", false);
             }
 
 
@@ -72,9 +69,11 @@ public class PlayerController : MonoBehaviour
         {
             rb.velocity = Vector2.up * jumpForce;
             extraJumps--;
+            anim.SetTrigger("jumping");
         } else if (Input.GetKeyDown(KeyCode.UpArrow) && extraJumps == 0 && isGrounded == true)
         {
             rb.velocity = Vector2.up * jumpForce;
+            anim.SetTrigger("jumping");
         } 
 
 
@@ -94,6 +93,9 @@ public class PlayerController : MonoBehaviour
         if (health<=0) {
         Destroy(gameObject);
         }
+
+        anim.SetTrigger("damaged");
+
     
     }
 
