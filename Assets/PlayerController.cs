@@ -29,6 +29,8 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate() {
 
+    
+
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
 
         moveInput = Input.GetAxis("Horizontal");
