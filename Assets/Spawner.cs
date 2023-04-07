@@ -17,14 +17,11 @@ public class Spawner : Enemy
 
     public float startWaitTime;
 
-    private Animator anim;
-
 
     public override void Start() 
     {
         base.Start();
         randomSpot = Random.Range(0, moveSpots.Length);
-        anim = GetComponent<Animator> ();
     }
 
     private void Update() 
@@ -36,9 +33,7 @@ public class Spawner : Enemy
             if (Time.time >= summonTime)
             {
                 summonTime = Time.time + timeBetweenSummons;
-                anim.SetTrigger("spawn");
-            } else {
-                anim.SetBool("idle", true);
+                summon();
             }
         }
 

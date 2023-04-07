@@ -13,12 +13,9 @@ public class Easy : Enemy
 
     public int damage;
 
-    private Animator anim;
-
     public override void Start()
     {
         base.Start();
-        anim = GetComponent<Animator> ();
     }
 
     private void Update() 
