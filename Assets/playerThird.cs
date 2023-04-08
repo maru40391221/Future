@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class playerThird : MonoBehaviour
 {
+    public float health;
+
     //moving right and left
     public float speed;
     private float moveInput;
@@ -48,8 +50,11 @@ public class playerThird : MonoBehaviour
 
         //jumping action
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
-
         //
+
+
+
+
     }
 
     private void Update() {
@@ -69,14 +74,24 @@ public class playerThird : MonoBehaviour
             rb.velocity = Vector2.up * jumpForce;
         }
         //
+
+        
     }
 
-    // body-fliping
+    // body-flipping
     void Flip (){
         facingRight = !facingRight;
         Vector3 Scaler = transform.localScale;
         Scaler.x *= -1;
         transform.localScale = Scaler;
     }
-    //
+            //health
+    public void TakeDamage (int damageAmount) {
+        health -= damageAmount;
+        if (health<=0) {
+            Destroy(gameObject);
+            Debug.Log("GameOver");
+        }
+        
+    }
 }
